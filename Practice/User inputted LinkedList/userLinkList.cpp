@@ -111,9 +111,7 @@ bool checkInput();
 void createLinkList();
 void commandsMenu(LinkList *chain);
 void cmdAdd(LinkList *chain);
-void methodAdd(LinkList *chain, int n);
 void cmdDelete(LinkList *chain);
-void cmdPrint(LinkList *chain);
 void cmdSearch(LinkList *chain);
 
 int main()
