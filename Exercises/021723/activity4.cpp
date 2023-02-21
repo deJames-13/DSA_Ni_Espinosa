@@ -75,9 +75,9 @@ void programA()
 {
     Node *head = NULL;
     append(&head, 34);
-    insertAfter(head, 25);
+    insertAfter(head, 25); // Insert after 34
     prepend(&head, 20);
-    insertAfter(head, 28);
+    insertAfter(head, 28); // Insert after 20
     prepend(&head, 17);
     append(&head, 32);
     append(&head, 33);
