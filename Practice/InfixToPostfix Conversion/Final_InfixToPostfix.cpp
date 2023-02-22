@@ -25,12 +25,11 @@ int main()
     {
         char curr = input[i];
 
-        // remove empty spaces
-        if (curr == ' ')
-            continue;
-
+        // STEP 2;
+        if (validOperands.find(tolower(curr)) != validOperands.npos)
+            output += curr;
         // STEP 3;
-        if (curr == '(')
+        else if (curr == '(')
             opStacks.push(curr);
         // STEP 4;
         else if (operators.find(curr) != operators.npos)
@@ -38,9 +37,6 @@ int main()
         // STEP 5;
         else if (curr == ')')
             popGroup(&opStacks, &output);
-        // STEP 2;
-        else if (validOperands.find(tolower(curr)) != validOperands.npos)
-            output += curr;
     }
     // STEP 6;
     popAll(&opStacks, &output);
