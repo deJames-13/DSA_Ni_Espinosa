@@ -73,12 +73,18 @@ void runProgram()
 
 void programA()
 {
+    int x = 10;
+    int *point = &x;
+
+    // Node **head
     Node *head = NULL;
+
+    // Node **head = &head;
     append(&head, 34);
     insertAfter(head, 25); // Insert after 34
     prepend(&head, 20);
     insertAfter(head, 28); // Insert after 20
-    prepend(&head, 17);
+    prepend(&head, 17);    // 17 20 28 34 25
     append(&head, 32);
     append(&head, 33);
     prepend(&head, 15);
@@ -160,7 +166,7 @@ void stackProgram1()
     stack1.push(29);
     stack1.push(32);
     stack1.push(35);
-    stack1.push(38);
+    stack1.push(38); // last in first out -
 
     cout << "\n\nDisplaying stack: \n";
     displayStack(stack1);
