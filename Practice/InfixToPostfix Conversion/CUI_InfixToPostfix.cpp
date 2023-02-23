@@ -2,6 +2,7 @@
 #include <stack>
 using namespace std;
 
+void runProgram();
 bool isHigher(char top, char curr);
 void popGroup(stack<char> *op, string *res);
 void popHigher(stack<char> *op, string *res, char curr);
@@ -9,6 +10,13 @@ void popAll(stack<char> *op, string *res);
 
 int main()
 {
+    runProgram();
+    return 0;
+}
+
+void runProgram()
+{
+
     string input, output;
     stack<char> opStacks;
 
@@ -43,7 +51,6 @@ int main()
 
     // PRINT OUTPUT
     cout << "Postfix: " << output << endl;
-    return 0;
 }
 
 void popAll(stack<char> *op, string *res)
